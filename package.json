@@ -1,0 +1,27 @@
+{
+  "name": "wordnet-api",
+  "version": "1.0.0",
+  "description": "Wordnet graphql api",
+  "scripts": {
+    "dev": "NODE_ENV=development node src/server.js",
+    "production": "NODE_ENV=production node src/server.js",
+    "lint": "eslint \"src/**/*.js\""
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint"
+  },
+  "author": "Mateusz Kmiecinski",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "hmac-auth-express": "^6.0.0",
+    "wordpos": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "simple-git-hooks": "^2.4.1"
+  }
+}
