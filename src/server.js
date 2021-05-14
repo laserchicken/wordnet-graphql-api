@@ -17,7 +17,7 @@ var app = express();
 if (environment === "production") {
   //body parsing, hmac middleware uses req.body
   app.use(express.json());
-  app.use(hmac("secret"));
+  app.use(hmac(process.env.HMAC_SECRET, { minInterval: 200 }));
 }
 
 app.use(
@@ -28,4 +28,4 @@ app.use(
     graphiql: environment !== "production",
   })
 );
-app.listen(4000);
+app.listen(process.env.PORT);

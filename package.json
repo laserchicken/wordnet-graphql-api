@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Wordnet graphql api",
   "scripts": {
-    "dev": "NODE_ENV=development node src/server.js",
+    "dev": "PORT=4000 NODE_ENV=development node src/server.js",
     "production": "NODE_ENV=production node src/server.js",
     "lint": "eslint \"src/**/*.js\""
   },
